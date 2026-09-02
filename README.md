@@ -1,8 +1,12 @@
 # AI System & AI Infra
 
+大模型内容太多啦！！因此最新大模型的内容归档在 [AIFoundation](https://github.com/chenzomi12/AIFoundation/) https://github.com/chenzomi12/AIFoundation/ 上面，欢迎大家移步过去哦！！
+
+--------------
+
 文字课程内容正在一节节补充更新，尽可能抽空继续更新正在 [AISys](https://chenzomi12.github.io/) ，希望您多多鼓励和参与进来！！！
 
-文字课程开源在 [AISys](https://chenzomi12.github.io/)，系列视频托管[B 站](https://space.bilibili.com/517221395)和[油管](https://www.youtube.com/@zomi6222/videos)，PPT 开源在[github](https://github.com/chenzomi12/AISystem)，欢迎取用！！！
+文字课程开源在 [AISys](https://infrasys-ai.github.io/aisystem-docs/)，系列视频托管[B 站](https://space.bilibili.com/517221395)和[油管](https://www.youtube.com/@zomi6222/videos)，PPT 开源在[github](https://github.com/chenzomi12/AISystem)，欢迎取用！！！
 
 ## 课程背景
 
@@ -92,7 +96,5 @@
 > 非常希望您也参与到这个开源课程中，B 站给 ZOMI 留言哦！
 > 
 > 欢迎大家使用的过程中发现 bug 或者勘误直接提交代码 PR 到开源社区哦！
->
-> 欢迎大家使用的过程中发现 bug 或者勘误直接提交 PR 到开源社区哦！
 >
 > 请大家尊重开源和 ZOMI 的努力，引用 PPT 的内容请规范转载标明出处哦！

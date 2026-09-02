@@ -235,7 +235,7 @@ Triton 的前端是基于 Python 实现的，这使得用户的学习成本大�
 
 - 优化 Pass：主要包括了英伟达 GPU 计算 kernel 优化的一些常见技巧，包括用于辅助向量化访存的[coalescing](https://link.zhihu.com/?target=https%3A//github.com/openai/triton/blob/main/lib/Dialect/TritonGPU/Transforms/Coalesce.cpp)、用于缓解计算访存差异的[pipeline](https://link.zhihu.com/?target=https%3A//github.com/openai/triton/blob/main/lib/Dialect/TritonGPU/Transforms/Pipeline.cpp)/[prefetch](https://link.zhihu.com/?target=https%3A//github.com/openai/triton/blob/main/lib/Dialect/TritonGPU/Transforms/Prefetch.cpp)，用于避免 shared memory 访问 bank-conflict 的[swizzling](https://link.zhihu.com/?target=https%3A//github.com/openai/triton/blob/main/include/triton/Dialect/TritonGPU/IR/TritonGPUAttrDefs.td%23L47)。用户在开发 Kernel 时，主要关注其业务逻辑，而底层硬件优化的细节由 Trition 编译器实现。对于一些十分精细的优化，使用 Triton 可能就无法实现。
 
-在应用场景上，Triton 已经被集成进了多个著名的课程中：
+在应用场景上，Triton 已经被集成进了多个著名的项目中：
 
 - [jax-ml/jax-triton](https://github.com/jax-ml/jax-triton)：JAX 是一个用于加速数值计算的 Python 库，使用 Triton 编写可以嵌入到 JAX 程序中的自定义 GPU 内核。在 JAX 中可以使用 triton_call 方便的调用 Triton kernel。
 
@@ -249,7 +249,7 @@ Triton 的前端是基于 Python 实现的，这使得用户的学习成本大�
 - 线程管理：最大化利用硬件计算资源，规划并行线程数量和线程束大小。
 - 指令使用：使用 CUDA 实现一个功能有相应多种指令，不同指令具有不同延迟和吞吐量。
 
-Triton 提高了算子开发时的效率，使得开发者不再囿于硬件细节。CUDA 直接面向 Thread 变成，而 Triton 面向 Thread Block 编程，开发者只需关注 1）Kernel launch 的参数；2）每个数据分块的大小；3）数据分块之间的交互。在这之下的细节由 Triton 实现。
+Triton 提高了算子开发时的效率，使得开发者不再囿于硬件细节。CUDA 直接面向 Thread 编程，而 Triton 面向 Thread Block 编程，开发者只需关注 1）Kernel launch 的参数；2）每个数据分块的大小；3）数据分块之间的交互。在这之下的细节由 Triton 实现。
 
 Triton 是基于 MLIR 实现的，其架构如下图[^1]：
 
